@@ -44,7 +44,6 @@ const Login = () => {
         password.current.value
       )
         .then((userCredential) => {
-          console.log(userCredential.user);
         })
         .catch((error) => {
           setErrorMessage(getErrorMessage(error.code));
@@ -56,7 +55,6 @@ const Login = () => {
         password.current.value
       )
         .then((userCredential) => {
-          console.log(userCredential.user);
         })
         .catch((error) => {
           setErrorMessage(getErrorMessage(error.code));
@@ -64,7 +62,7 @@ const Login = () => {
     }
   };
   return (
-    <div className="">
+    <div>
       <Header />
       <div className="absolute">
         <img
