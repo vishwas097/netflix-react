@@ -13,12 +13,46 @@ export const API_OPTIONS = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2YTcwNDg2MmI0N2YyMDMzNWZhZjgzODk4OWJhY2YxNiIsInN1YiI6IjY1ZTA4ZjFjZjg1OTU4MDE4NjRmNDNiMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.mTVODJYZ8P6al2BEaXEHtIU2pJOl2e85GXgf26b-uP8",
+    Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2YTcwNDg2MmI0N2YyMDMzNWZhZjgzODk4OWJhY2YxNiIsInN1YiI6IjY1ZTA4ZjFjZjg1OTU4MDE4NjRmNDNiMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.mTVODJYZ8P6al2BEaXEHtIU2pJOl2e85GXgf26b-uP8",
   },
 };
+
+export const OPEN_KEY = process.env.REACT_APP_OPENAI_KEY;
 
 export const errorMapper = new Map([
   ["auth/email-already-in-use", "Email already exists"],
   ["auth/invalid-credential", "Incorrect Email or Password"],
 ]);
+
+export const SUPPORTED_LANGUAGES = [
+  { identifier: "en", name: "English" },
+  { identifier: "ka", name: "Kannada" },
+  { identifier: "hi", name: "Hindi" },
+  { identifier: "sp", name: "Spanish" },
+];
+
+export const CATEGORY_MOVIES = [
+  { identifier: "nowPlayingMovies", name: "Now Playing" },
+  { identifier: "upcomingMovies", name: "Upcoming Movies" },
+  { identifier: "popularMovies", name: "Popular" },
+  { identifier: "topRatedMovies", name: "Top Rated Movies" },
+];
+
+export const lang = {
+  en: {
+    search: "Search",
+    gptSearchPlaceholder: "What would you like to watch today?",
+  },
+  ka: {
+    search: "ಹುಡುಕಿ",
+    gptSearchPlaceholder: "ನೀವು ಇಂದು ಏನನ್ನು ವೀಕ್ಷಿಸಲು ಬಯಸುತ್ತೀರಿ?",
+  },
+  hi: {
+    search: "खोज",
+    gptSearchPlaceholder: "आज आप क्या देखना चाहेंगे?",
+  },
+  sp: {
+    search: "buscar",
+    gptSearchPlaceholder: "¿Qué te gustaría ver hoy?",
+  },
+};
