@@ -23,7 +23,6 @@ const MovieDetails = () => {
     dispatch(changeDetails(true));
   }, []);
   const movie = movieList[params.type]?.find((mov) => mov.id == params.movieId);
-  console.log(movie);
   useMovieTrailer(params.movieId);
   if (!movie) return;
   return (

@@ -17,7 +17,6 @@ const GptSearchBar = () => {
       messages: [{ role: "user", content: searchQuery }],
       model: "gpt-3.5-turbo",
     });
-    console.log(chatCompletion);
   };
   return (
     <div className="pt-[5%] flex justify-center">
@@ -26,7 +25,7 @@ const GptSearchBar = () => {
         onSubmit={(e) => e.preventDefault()}
       >
         <input
-          ref={searchText}
+          ref={searchText} id="search"
           className="m-4 p-4 rounded-md col-span-10"
           placeholder={lang[langSelected].gptSearchPlaceholder}
         />

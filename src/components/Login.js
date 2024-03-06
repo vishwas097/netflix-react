@@ -79,7 +79,7 @@ const Login = () => {
           {signInForm ? "Sign In" : "Sign Up"}
         </h1>
         {!signInForm && (
-          <input
+          <input id="fullName"
             placeholder="Full Name"
             ref={fullname}
             type="text"
@@ -87,13 +87,13 @@ const Login = () => {
           />
         )}
         <input
-          placeholder="Email"
+          placeholder="Email" id="email"
           ref={email}
           type="text"
           className="p-4 my-4 bg-gray-700 text-white w-9/12"
         />
         <input
-          placeholder="Password"
+          placeholder="Password" id="password"
           ref={password}
           type="password"
           className="p-4 my-4 bg-gray-700 text-white w-9/12"

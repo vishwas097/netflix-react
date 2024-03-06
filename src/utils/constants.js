@@ -13,11 +13,9 @@ export const API_OPTIONS = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2YTcwNDg2MmI0N2YyMDMzNWZhZjgzODk4OWJhY2YxNiIsInN1YiI6IjY1ZTA4ZjFjZjg1OTU4MDE4NjRmNDNiMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.mTVODJYZ8P6al2BEaXEHtIU2pJOl2e85GXgf26b-uP8",
+    Authorization: `Bearer ${process.env.REACT_APP_TMDB_TOKEN}`,
   },
 };
-
-export const OPEN_KEY = process.env.REACT_APP_OPENAI_KEY;
 
 export const errorMapper = new Map([
   ["auth/email-already-in-use", "Email already exists"],

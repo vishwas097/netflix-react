@@ -11,7 +11,7 @@ import GptSearch from "./GptSearch";
 import { changeDetails } from "../utils/configSlice";
 
 const Browse = () => {
-  const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
+  const showGptSearch = useSelector((store) => store.gpt?.showGptSearch);
   const dispatch = useDispatch();
   useNowPlayingMovies();
   usePopularMovies();
