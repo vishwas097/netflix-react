@@ -39,7 +39,7 @@ const Header = ({ error = false }) => {
   };
 
   return (
-    <div className="absolute w-full bg-gradient-to-b from-black z-10 flex justify-between">
+    <div className="absolute w-full bg-gradient-to-b from-black z-10 md:flex md:justify-between">
       <img className="w-52" src={LOGO} alt="logo" />
 
       {user && (

@@ -14,7 +14,7 @@ const GptSearchBar = () => {
       ". only give me names of 5 movies, comma seperated like the example result given ahead. Example Result: Gadar, Sholay, Don, Golmaal, Koi Mil Gaya";
 
     const chatCompletion = await openai.chat.completions.create({
-      messages: [{ role: "user", content: searchQuery }],
+      messages: [{ role: "user", content: searchText.current.value }],
       model: "gpt-3.5-turbo",
     });
   };
